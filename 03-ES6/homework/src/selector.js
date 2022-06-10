@@ -18,7 +18,9 @@ var traverseDomAndCollectElements = function(matchFunc, startEl) {
 
 var selectorTypeMatcher = function(selector) {
   // tu código aquí
-  
+  if(selector[0] === '#') return 'id';
+  if(selector[0] === '.') return 'class';
+
 };
 
 // NOTA SOBRE LA FUNCIÓN MATCH
@@ -41,9 +43,11 @@ var matchFunctionMaker = function(selector) {
   return matchFunction;
 };
 
-var $ = function(selector) {
+//$ es la func tipo querySelector
+var $ = function(selector) { //selector es el param (div por ej)
   var elements;
   var selectorMatchFunc = matchFunctionMaker(selector);
   elements = traverseDomAndCollectElements(selectorMatchFunc);
   return elements;
 };
+// $(".class") sería una func que funciona como un document.querySelector('.class')

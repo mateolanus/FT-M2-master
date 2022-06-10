@@ -19,7 +19,9 @@ En spec/selectorSpec.js podes previsualizar como los test estan siendo corridos.
 En este homework, vamos a crear nuestra propia implementación de un selector en el DOM, es decir, vamos a traversar (recorrer) el DOM buscando elementos que matcheen con el argumento que le hayamos pasado. Por ejemplo:
 
 ```
-$('#id') => debería retornar un elemento con id: "id".
+$('#id') debería retornar un elemento con id: "id".
+
+/// $(".class") sería una func que funciona como un document.querySelector('.class')
 ```
 
 Si bien este problema parece muy complejo a priori, vamos a usar la ténica [**divide and conquer**](https://es.wikipedia.org/wiki/Algoritmo_divide_y_vencer%C3%A1s). De esta manera vamos a separar el problema en tres problemas más pequeños:
